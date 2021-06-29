@@ -16,12 +16,12 @@ page = AllBooksPage(pageContent)
 
 books = page.books
 
-# for webPage in range(1, page.page_count):
-#     url = 'https://books.toscrape.com/catalogue/page-' + str(webPage + 1) + '.html'
-#     # url = f'https://books.toscrape.com/catalogue/page-{webPage + 1}.html'
-#     pageContent = requests.get(url).content
-#     page = AllBooksPage(pageContent)
-#     books.extend(page.books)
+for webPage in range(1, page.page_count):
+    url = 'https://books.toscrape.com/catalogue/page-' + str(webPage + 1) + '.html'
+    # url = f'https://books.toscrape.com/catalogue/page-{webPage + 1}.html'
+    pageContent = requests.get(url).content
+    page = AllBooksPage(pageContent)
+    books.extend(page.books)
 
 
 
